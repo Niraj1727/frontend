@@ -1,0 +1,108 @@
+/* General Styles */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #000000, #1a1a1a);
+    padding: 20px; /* Prevent touching screen edges */
+  }
+  
+  .login-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .login-card h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .login-card input {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    outline: none;
+  }
+  
+  .login-card input::placeholder {
+    color: #999;
+  }
+  
+  .login-card input:focus {
+    border: 2px solid #00ffcc;
+    background-color: #444;
+  }
+  
+  .login-card .login-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    background-color: #00ffcc;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .login-card .login-button:hover {
+    background-color: #00997a;
+    color: #fff;
+  }
+  
+  .login-card p {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  .login-card .register-link {
+    color: #00ffcc;
+    text-decoration: none;
+  }
+  
+  .login-card .register-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 768px) {
+    .login-container {
+      padding: 40px 20px; /* Extra padding for smaller devices */
+    }
+  
+    .login-card {
+      padding: 25px 15px; /* Adjust padding inside the card */
+    }
+  
+    .login-card h2 {
+      font-size: 1.8rem; /* Adjust heading size for mobile */
+    }
+  
+    .login-card input {
+      padding: 8px 12px; /* Adjust input padding */
+      font-size: 0.9rem;
+    }
+  
+    .login-card .login-button {
+      padding: 10px 15px; /* Adjust button size */
+      font-size: 0.9rem;
+    }
+  }
+  

@@ -1,0 +1,108 @@
+/* General Styles */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom right, #000000, #1a1a1a);
+    padding: 20px; /* Add padding to prevent elements from touching screen edges */
+  }
+  
+  .register-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 30px 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .register-card h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  .register-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .register-card input {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    outline: none;
+  }
+  
+  .register-card input::placeholder {
+    color: #999;
+  }
+  
+  .register-card input:focus {
+    border: 2px solid #00ffcc;
+    background-color: #444;
+  }
+  
+  .register-card .register-button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    background-color: #00ffcc;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .register-card .register-button:hover {
+    background-color: #00997a;
+    color: #fff;
+  }
+  
+  .register-card p {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  .register-card p a {
+    color: #00ffcc;
+    text-decoration: none;
+  }
+  
+  .register-card p a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 768px) {
+    .register-container {
+      padding: 40px 20px; /* Increase padding for better spacing */
+    }
+  
+    .register-card {
+      padding: 25px 15px; /* Adjust padding inside the card */
+    }
+  
+    .register-card h2 {
+      font-size: 1.8rem; /* Slightly smaller heading for smaller screens */
+    }
+  
+    .register-card input {
+      padding: 8px 12px; /* Smaller padding for inputs */
+      font-size: 0.9rem;
+    }
+  
+    .register-card .register-button {
+      padding: 10px 15px; /* Adjust button size */
+      font-size: 0.9rem;
+    }
+  }
+  

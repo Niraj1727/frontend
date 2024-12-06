@@ -1,0 +1,91 @@
+/* Main Container */
+.subject-selection-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0d0d0d, #1e1e1e);
+    font-family: 'Inter', sans-serif;
+    padding: 0 20px; /* Margins for small screens */
+  }
+  
+  /* Card Styling */
+  .subject-selection-card {
+    text-align: center;
+    background: rgba(30, 30, 30, 0.85);
+    padding: 40px;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  /* Title Styling */
+  .subject-selection-title {
+    font-size: 1.8rem;
+    color: #ffffff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* Button Container */
+  .subject-selection-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Button Styling */
+  .subject-selection-button {
+    background: linear-gradient(135deg, #FF7A18, #AF002D, #319197);
+    color: #ffffff;
+    font-size: 1.2rem;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .subject-selection-button:hover {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .subject-selection-card {
+      padding: 30px;
+    }
+  
+    .subject-selection-title {
+      font-size: 1.5rem;
+    }
+  
+    .subject-selection-button {
+      font-size: 1rem;
+      padding: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .subject-selection-card {
+      padding: 20px;
+    }
+  
+    .subject-selection-title {
+      font-size: 1.3rem;
+    }
+  
+    .subject-selection-button {
+      font-size: 0.9rem;
+      padding: 10px;
+    }
+  }
+  
