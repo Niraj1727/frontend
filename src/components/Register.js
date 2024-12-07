@@ -11,7 +11,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://acezy.site/api/auth/register', { // Using relative path
+      const res = await axios.post('http://3.109.231.78:5000/api/auth/register', { // Using relative path
         name,
         email,
         password,
