@@ -21,7 +21,7 @@ const PaymentPage = () => {
         }
 
         try {
-            const { data } = await axios.post('https://13.233.123.159:5000/api/payment/create-order', {
+            const { data } = await axios.post('https://api.acezy.site/api/payment/create-order', {
                 amount: 500, // Amount in INR
                 currency: 'INR',
             });
@@ -44,7 +44,7 @@ const PaymentPage = () => {
                     };
 
                     try {
-                        const verifyRes = await axios.post('/api/payment/verify-payment', paymentData);
+                        const verifyRes = await axios.post('https://api.acezy.site/api/payment/verify-payment', paymentData);
 
                         if (verifyRes.data.message === "Payment verified successfully") {
                             alert("Payment successful! Subscription activated.");

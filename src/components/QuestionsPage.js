@@ -23,7 +23,7 @@ const QuestionsPage = () => {
       try {
         const token = localStorage.getItem("token");
         const res = await axios.get(
-          `/api/questions/${subject}`,
+          `https://api.acezy.site/api/questions/${subject}`,
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -75,7 +75,7 @@ const QuestionsPage = () => {
       console.log(`Fetching questions for chapter: ${chapter}`);
 
       const res = await axios.get(
-        `/api/questions/${encodeURIComponent(subject)}/${encodeURIComponent(chapter)}/questions`,
+        `https://api.acezy.site/api/questions/${encodeURIComponent(subject)}/${encodeURIComponent(chapter)}/questions`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
