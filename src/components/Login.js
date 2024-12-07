@@ -6,11 +6,17 @@ import './Login.css';
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false); // Toggle password visibility
+  const [loading, setLoading] = useState(false); // Show loading indicator
+  const [errorMessage, setErrorMessage] = useState(''); // Custom error message
   const navigate = useNavigate();
 
   // Form-based login
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Start loading
+    setErrorMessage(''); // Clear previous error messages
+
     try {
       const res = await axios.post('https://api.acezy.site/api/auth/login', {
         email,
@@ -27,8 +33,12 @@ const Login = () => {
       alert('Login successful!');
       navigate('/subjects');
     } catch (err) {
-      console.error(err.response.data);
-      alert('Error during login: ' + err.response.data.message);
+      console.error(err?.response?.data || err.message);
+      setErrorMessage(
+        err?.response?.data?.message || 'An error occurred during login.'
+      );
+    } finally {
+      setLoading(false); // Stop loading
     }
   };
 
@@ -44,17 +54,35 @@ const Login = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            required
-          />
-          <button type="submit" className="login-button">Login</button>
+          <div className="password-container">
+            <input
+              type={showPassword ? 'text' : 'password'}
+              placeholder="Password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            <button
+              type="button"
+              className="toggle-password"
+              onClick={() => setShowPassword((prev) => !prev)}
+            >
+              {showPassword ? 'Hide' : 'Show'}
+            </button>
+          </div>
+          {errorMessage && (
+            <p className="error-message">{errorMessage}</p>
+          )}
+          <button type="submit" className="login-button" disabled={loading}>
+            {loading ? 'Logging in...' : 'Login'}
+          </button>
         </form>
         <p>
-          Don't have an account? <Link to="/register" className="register-link">Register here</Link>
+          Don't have an account?{' '}
+          <Link to="/register" className="register-link">Register here</Link>
+        </p>
+        <p>
+          <Link to="/forgot-password" className="forgot-password-link">Forgot Password?</Link>
         </p>
       </div>
     </div>

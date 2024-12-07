@@ -80,7 +80,53 @@
   .login-card .register-link:hover {
     text-decoration: underline;
   }
+  .password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ensure it takes the same width as other input fields */
+  }
   
+  .password-container input {
+    width: 100%; /* Make the input field fill the container */
+    padding-right: 50px; /* Adjust padding for the toggle button */
+  }
+  
+  .password-container .toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #00ffcc;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  .password-container .toggle-password:hover {
+    color: #00997a;
+  }
+  
+/* Error Message */
+.login-card .error-message {
+  color: #ff4d4d;
+  font-size: 0.85rem;
+  margin-top: -10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Forgot Password Link */
+.forgot-password-link {
+  color: #00ffcc;
+  text-decoration: none;
+}
+
+.forgot-password-link:hover {
+  text-decoration: underline;
+}
+
   /* Media Query for Mobile Devices */
   @media (max-width: 768px) {
     .login-container {

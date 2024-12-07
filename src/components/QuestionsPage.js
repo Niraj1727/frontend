@@ -177,9 +177,10 @@ const QuestionsPage = () => {
                                     {showAnswerIndex === idx ? "Hide Answer" : "View Answer"}
                                   </button>
                                   {showAnswerIndex === idx && (
-                                    <p className="answer">
-                                      <strong>Answer:</strong> {q.answer}
-                                    </p>
+                                    <div className="answer">
+    <strong>Answer:</strong>
+    <div style={{ whiteSpace: "pre-line", marginTop: "5px" }}>{q.answer}</div>
+  </div>
                                   )}
                                 </div>
                               )}
