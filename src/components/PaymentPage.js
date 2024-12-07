@@ -44,7 +44,7 @@ const PaymentPage = () => {
                     };
 
                     try {
-                        const verifyRes = await axios.post('https://api.acezy.site/api/payment/verify-payment', paymentData);
+                        const verifyRes = await axios.post('/api/payment/verify-payment', paymentData);
 
                         if (verifyRes.data.message === "Payment verified successfully") {
                             alert("Payment successful! Subscription activated.");

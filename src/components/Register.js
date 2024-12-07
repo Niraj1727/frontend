@@ -11,7 +11,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://api.acezy.site/api/auth/register', {
+      const res = await axios.post('/api/auth/register', { // Using relative path
         name,
         email,
         password,
@@ -19,8 +19,8 @@ const Register = () => {
       console.log('User registered:', res.data);
       alert('Registration successful! You can now log in.');
     } catch (err) {
-      console.error(err.response.data);
-      alert('Error during registration: ' + err.response.data.message);
+      console.error(err?.response?.data || err.message); // Handle undefined error responses
+      alert('Error during registration: ' + (err?.response?.data?.message || 'Unknown error'));
     }
   };
 

@@ -12,7 +12,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://api.acezy.site/api/auth/login', {
+      const res = await axios.post('/api/auth/login', {
         email,
         password,
       });

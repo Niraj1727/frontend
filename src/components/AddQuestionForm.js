@@ -71,7 +71,7 @@ const AddQuestionForm = () => {
 
     try {
       const res = await axios.post(
-        `https://api.acezy.site/api/questions/${subject}/${chapter}/add-question`,
+        `/api/questions/${subject}/${chapter}/add-question`,
         { question, answer },
         {
           headers: {
