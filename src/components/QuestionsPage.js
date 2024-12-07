@@ -179,7 +179,10 @@ const QuestionsPage = () => {
                                   {showAnswerIndex === idx && (
                                     <div className="answer">
     <strong>Answer:</strong>
-    <div style={{ whiteSpace: "pre-line", marginTop: "5px" }}>{q.answer}</div>
+    <div
+  style={{ whiteSpace: "pre-line", marginTop: "5px" }}
+  dangerouslySetInnerHTML={{ __html: q.answer }}
+></div>
   </div>
                                   )}
                                 </div>
